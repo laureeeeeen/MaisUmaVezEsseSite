@@ -1,0 +1,71 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container principal */
+#container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: linear-gradient(to bottom, #dfad9c, #f8e8d5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px 30px; /* Adiciona espaço no topo sem afetar o tamanho total */
+}
+
+
+/* Flip card */
+.flip-card {
+    width: 250px;
+    height: 550px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Serif Display", serif;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* Efeito de hover para virar apenas o card individualmente */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Faces do card */
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Imagem do card */
+.flip-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

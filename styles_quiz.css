@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #40534d; 
+}
+
+.app {
+    background: #fff;
+    width: 90%; /* Reduzido um pouco para evitar que ocupe 100% da tela */
+    max-width: 900px; /* Aumentado para deixar mais largo */
+    margin: 100px auto 0;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+.app h1 {
+    font-weight: normal; /* Remove o negrito */
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    letter-spacing: 0.5vh;
+}
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: rgb(74, 128, 119);
+    font-weight: 600;
+    font-family: "Open Sans", serif;
+    font-style: normal;
+    letter-spacing: 0.2vh;
+
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+
+}
+
+.btn:disabled {
+    cursor: no-drop; 
+}
+
+#next-btn {
+    background: rgb(74, 128, 119);
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct {
+    background: #95998a;
+}
+
+.incorrect {
+    background: #c98e82;
+}

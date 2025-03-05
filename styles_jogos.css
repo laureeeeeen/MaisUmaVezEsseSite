@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.containerJogo {
+    padding: 40px 50px;
+    color: white;
+    background-color: #40534d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: -130px; /* Levando mais para cima */
+    letter-spacing: 0.5vh;
+    font-style: italic;
+    font-weight: normal;
+    font-family: "DM Serif Display", serif;
+}
+
+.text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 200px; /* Reduzido para aproximar os elementos */
+    margin-top: -350px; /* Ajuste fino na posição */
+}
+
+.jogosTexto {
+    font-size: 22px;
+    margin-top: -60px; /* Aproximando mais do título */
+    letter-spacing: 0.3vh;
+    font-weight: normal;
+    font-family: "Open Sans", serif;
+    line-height: 4.5vh; /* Reduzido para melhor espaçamento */
+}
+
+.img {
+    width: 90%; /* Aumentado um pouco */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.img img {
+    margin-top: 30px; /* Pequeno ajuste para melhor alinhamento */
+    max-width: 80%; /* Aumentado para maior destaque */
+    height: auto;
+}

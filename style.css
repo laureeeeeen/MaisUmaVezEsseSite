@@ -1,0 +1,381 @@
+header{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #c98e82;
+    height: 8vh;
+}
+
+.inicio{
+    background: url("fundoTela.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h2.titulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;  
+    font-size: 100px;  
+    text-align: center;
+    letter-spacing: 10px; 
+    font-weight: 100;
+    font-style: italic;
+        
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 40vw;
+        height: 92vh;
+        background-color: #c98e82;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+   from{
+    opacity: 0;
+    transform: translateX(50px);
+   } 
+   to{
+    opacity: 1;
+    transform: translateX(0);
+   }
+}
+
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.bottom-header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottom-header nav ul li a{
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+.drop-hover{
+    position: relative;
+    z-index: 1100;
+}
+
+.drop-hover1{
+    position: relative;
+    z-index: 1100;
+}
+
+.drop-hover .drop, .drop-hover1 .drop{
+    position: absolute;
+    background-color: #c98e82;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .8s;
+    top: 100%;
+}
+
+.drop-hover .drop a, .drop-hover1 .drop a{
+    padding: 20px;
+}
+
+.drop-hover:hover .drop{
+    height: 470px;
+}
+
+.drop-hover1:hover .drop{
+    height: 240px;  /*aumenta a barra com as informaçoes*/
+}
+
+
+.container1 {
+    padding: 20px 50px 90px; /* Aumentei o padding para empurrar os elementos para baixo */
+    background: linear-gradient(to bottom, #c98e82, #dfad9c);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    overflow: hidden; 
+    font-weight: normal;
+    height: 100%;
+
+}
+
+.text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Reduzi um pouco para não ficar muito espaçado */
+    margin-top: 50px; /* Alterado para um valor positivo */
+}
+
+h1.Arcade {
+    font-size: 50px;
+    margin-top: -20px; /* Ajustei para um valor positivo */
+    letter-spacing: 0.5vh;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.definicao {
+    font-size: 19px;
+    margin-top: -15px; /* Ajustado para não ficar muito colado */
+    letter-spacing: 0.3vh;
+    font-weight: normal;
+    font-family: "Open Sans", serif;
+    line-height: 5vh;
+}
+
+
+.img {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img img {
+    margin-top: 40px;
+    max-width: 50%;
+    height: auto;
+}
+
+
+/* Contexto Histórico */
+
+.container2 {
+    height: 100%;
+    background-color: #dfad9c;
+    width: 100%;
+    padding:0, 70px, 90px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+     
+}
+
+p.textoCont{
+    font-size: 19px;
+    letter-spacing: 0.3vh;
+    font-family: "Open Sans", serif;
+    line-height: 5vh;
+    text-indent: 5vh;
+}
+
+.title-section {
+    position: relative;
+    width: 100vw; /* Garante que ocupa toda a largura da viewport */
+    height: 36vh;
+    background-image: url('contexto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0; /* Garante que começa do canto esquerdo */
+    right: 0;
+}
+
+
+h1.textoCont{
+    margin-top: 5vh;
+    font-size: 50px;
+    letter-spacing: 0.5vh;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 5vh;
+    font-family: "Open Sans", serif;
+}
+
+.blocosDeTexto {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 50px;
+    gap: 20px;
+}
+
+.europa,
+.brasil {
+    text-align: left;
+    color: white;
+    width: 100%;
+    clear: both;
+    margin-top: 5vh;
+}
+
+h3.textoCont{
+    font-weight: bold;
+    letter-spacing: 0.5vh;
+    font-size: 25px;
+justify-content: center;
+}
+
+
+
+/* Caracteristicas */
+
+
+.carac_Arcadismo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('Captura%20de%20tela%202025-03-04%20155128.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 50px;
+}
+
+.paragrafo_caracteristicas {
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: "Open Sans", serif;
+    font-size: 15px;
+    letter-spacing: 0.2vh;
+    font-style: normal;
+}
+
+.titulo_Caracteristicas {
+    font-style: italic;
+    font-family: "DM Serif Display", serif;
+    font-size: 2em;
+    letter-spacing: 0.3vh;
+    font-weight: normal;
+}
+
+
+.carac_Arcadismo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('caracteristicas.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 50px;
+}
+
+
+
+
+
+
+/* Tela final Bocage */
+
+.tela_Finas{
+    background-color: #292421;
+}
+
+.containerBocage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px; /* Aumente esse valor para subir mais */
+    
+}
+
+.bocage_Fim {
+    max-width: 55%;
+    height: auto;
+    transform: translateY(-30px); /* Ajuste o valor conforme necessário */
+    margin-top: -200px;
+}
+
+p.frase{
+ font-size: 35px;
+ font-family: "Open Sans", serif;
+ font-style: italic;
+ letter-spacing: 0.6vh;
+ text-align: center;
+ margin-top: -220px;
+ padding: 30px 20px 150px; 
+}

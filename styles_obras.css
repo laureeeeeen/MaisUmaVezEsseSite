@@ -1,0 +1,49 @@
+section.obrasLiterarias {
+    background: linear-gradient( #687b69, #292421);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 100; */
+    padding: 100px 20px 100px; 
+}
+
+h1.obras {
+    margin-top: 7vh;
+    text-align: center;
+    font-size: 7vh;
+    color: white;
+    font-family: "Open Sans", serif;
+    letter-spacing: 0.28vh;
+    
+}
+
+.containerObras {
+    margin-top: 7vh;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+img.obras {
+    height: 45vh;
+    width: auto;
+    margin: 2vh; 
+    margin-top: 40px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+img.obras:hover {
+    transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+    img.obras {
+        width: 20vh;
+        height: auto;
+       justify-content: center;
+    }
+}
